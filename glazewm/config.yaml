@@ -95,6 +95,10 @@ window_rules:
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper*" }
 
+      - window_process: { equals: "Arc" }
+        window_title: { regex: "Arc.picture.in.picture" }
+        window_class: { regex: "WinUIDesktopWin32WindowClass" }
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
