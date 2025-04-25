@@ -106,7 +106,6 @@ window_rules:
         window_class: { regex: "Dialog$" }
 
 binding_modes:
-  # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
     keybindings:
       - commands: ["resize --width -2%"]
@@ -120,13 +119,6 @@ binding_modes:
       # Press enter/escape to return to default keybindings.
       - commands: ["wm-disable-binding-mode --name resize"]
         bindings: ["escape", "enter"]
-
-  # When enabled, all keybindings are disabled except for alt+shift+p which
-  # returns to default keybindings.
-  - name: "pause"
-    keybindings:
-      - commands: ["wm-disable-binding-mode --name pause"]
-        bindings: ["alt+shift+p"]
 
 keybindings:
   # Shift focus in a given direction.
@@ -165,8 +157,8 @@ keybindings:
   - commands: ["wm-enable-binding-mode --name resize"]
     bindings: ["alt+r"]
 
-  # Disables all keybindings until alt+shift+p is pressed again.
-  - commands: ["wm-enable-binding-mode --name pause"]
+  # Disables WM and all keybindings until alt+shift+p is pressed again.
+  - commands: ["wm-toggle-pause"]
     bindings: ["alt+shift+p"]
 
   # Change tiling direction. This determines where new tiling windows will
