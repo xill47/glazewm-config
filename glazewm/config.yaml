@@ -81,6 +81,15 @@ workspaces:
   - name: "9"
 
 window_rules:
+  - commands: ["set-floating"]
+    match:
+      - window_process: { regex: "godot\\.*" }
+
+  - commands: ["set-tiling"]
+    match:
+      - window_process: { regex: "godot\\.*" }
+        window_title: { regex: "Godot [34] - Godot Engine$" }
+
   - commands: ["ignore"]
     match:
       # Ignores any Zebar windows.
