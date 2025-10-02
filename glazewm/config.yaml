@@ -83,11 +83,11 @@ workspaces:
 window_rules:
   - commands: ["set-floating"]
     match:
-      - window_process: { regex: "godot\\.*" }
+      - window_process: { regex: "[gG]odot\\.*" }
 
   - commands: ["set-tiling"]
     match:
-      - window_process: { regex: "godot\\.*" }
+      - window_process: { regex: "[gG]odot\\.*" }
         window_title: { regex: "Godot [34] - Godot Engine$" }
 
   - commands: ["ignore"]
@@ -115,6 +115,8 @@ window_rules:
 
       - window_process: { equals: "rider64" }
         window_class: { regex: "Dialog$" }
+
+      - window_process: { equals: "ChatGPT" }
 
 binding_modes:
   - name: "resize"
