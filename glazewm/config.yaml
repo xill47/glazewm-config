@@ -21,14 +21,14 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "1px"
+  inner_gap: "2px"
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "2px"
-    right: "2px"
-    bottom: "2px"
-    left: "2px"
+    top: "4px"
+    right: "4px"
+    bottom: "4px"
+    left: "4px"
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -116,7 +116,7 @@ window_rules:
       - window_process: { equals: "rider64" }
         window_class: { regex: "Dialog$" }
 
-      - window_process: { equals: "ChatGPT" }
+      - window_process: { equals: "WindowSill" }
 
 binding_modes:
   - name: "resize"
